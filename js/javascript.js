@@ -13,7 +13,7 @@ let squares = document.querySelectorAll('.square');
 
 squares.forEach(function(square) {
     square.addEventListener('click', function() {
-        this.classList.add('active');
+        this.classList.toggle('active');
         console.log(this.innerText)
     });
 });
