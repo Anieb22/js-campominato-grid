@@ -1,12 +1,13 @@
 let output = document.getElementById('output');
-let string = '';
+let play = document.getElementById('play')
 
-for (let i = 1; i <= 100; i++) {
-    let elem = document.createElement('div')
-    elem.classList.add('square')
-    elem.innerText = i
-    output.append(elem);
-}
+play.addEventListener('click', function(){
+    for (let i = 1; i <= 100; i++) {
+        let elem = document.createElement('div')
+        elem.classList.add('square')
+        elem.innerText = i
+        output.append(elem);
+    }
 
 let squares = document.querySelectorAll('.square');
 
@@ -16,6 +17,7 @@ squares.forEach(function(square) {
         console.log(this.innerText)
     });
 });
+})
 
 let reset = document.getElementById('reset')
 reset.addEventListener('click', function(){
